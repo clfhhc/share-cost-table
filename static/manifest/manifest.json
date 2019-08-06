@@ -1,23 +1,23 @@
 {
-	"name": "Nextjs Ts Eslint",
-	"short_name": "Nextjs_Ts_Es",
+	"name": "share-cost-table",
+	"short_name": "share-cost-t",
 	"icons": [
 		{
-			"src": "/Nextjs_Ts_Eslint/static/icons/icon192x192.png",
+			"src": "/share-cost-table/static/icons/icon192x192.png",
 			"sizes": "192x192",
 			"type": "image/png"
 		},
 		{
-			"src": "/Nextjs_Ts_Eslint/static/icons/icon512x512.png",
+			"src": "/share-cost-table/static/icons/icon512x512.png",
 			"sizes": "512x512",
 			"type": "image/png"
 		}
 	],
-	"start_url": "/Nextjs_Ts_Eslint/",
+	"start_url": "/share-cost-table/",
 	"display": "standalone",
 	"orientation": "natural",
 	"background_color": "red",
 	"theme_color": "red",
-	"scope": "/Nextjs_Ts_Eslint/",
+	"scope": "/share-cost-table/",
 	"dir": "ltr"
 }

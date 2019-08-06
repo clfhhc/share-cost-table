@@ -1,8 +1,8 @@
 {
-  "name": "nextjs_ts_eslint",
+  "name": "share-cost-table",
   "version": "1.0.0",
-  "description": "Project Setup with NextJs, Typescript, Eslint, Prettier, styled-jsx, react hooks, service worker, manifest",
-  "repository": "github:Project-Setup/Nextjs_Ts_Eslint",
+  "description": "Share Cost Table",
+  "repository": "github:clfhhc/share-cost-table.git",
   "scripts": {
     "dev": "next",
     "build": "next build",

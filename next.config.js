@@ -4,7 +4,7 @@ const withOffline = require('next-offline');
 const withManifest = require('next-manifest');
 const publicRuntimeConfig = require('./ next.publicRuntimeConfig');
 
-const { linkPrefix, prodAssetPrefix, serviceWorkerFilename } = publicRuntimeConfig;
+const { projectName, linkPrefix, prodAssetPrefix, serviceWorkerFilename } = publicRuntimeConfig;
 
 module.exports = withManifest(
   withOffline({
@@ -34,8 +34,8 @@ module.exports = withManifest(
 
     manifest: {
       /* eslint-disable @typescript-eslint/camelcase */
-      short_name: 'Nextjs_Ts_Eslint',
-      name: 'Nextjs Ts Eslint',
+      short_name: projectName,
+      name: projectName,
       start_url: `${prodAssetPrefix}/`,
       background_color: 'red',
       display: 'standalone',
