@@ -2,7 +2,6 @@ import { applyMiddleware, Middleware } from 'redux';
 import getConfig from 'next/config';
 import configureStore, { ReducerEnhancedStore } from '../utils/redux/configureStore';
 import commonReducers from './reducers';
-import rootSaga from './sagas';
 
 export type Store = ReducerEnhancedStore;
 
@@ -18,6 +17,6 @@ const enhancer = (...middlewareArray: Middleware[]) => {
   return composeWithDevTools(applyMiddleware(...middlewareArray));
 };
 
-const initStore = configureStore({ commonReducers, enhancer, rootSaga });
+const initStore = configureStore({ commonReducers, enhancer });
 
 export default initStore;

@@ -1,12 +1,16 @@
+/* eslint-disable global-require, @typescript-eslint/no-var-requires */
+const commonConfig = require('./config/common');
+
 const isProd = process.env.NODE_ENV === 'production';
-const projectName = 'share-cost-table';
-const prodAssetPrefix = `/${projectName}`;
-const serviceWorkerFilename = 'service-worker.js';
+let addConfig;
+if (isProd) {
+  addConfig = require('./config/prod');
+} else {
+  addConfig = require('./config/dev');
+}
 
 module.exports = {
-  projectName,
-  linkPrefix: isProd ? prodAssetPrefix : '',
   isProd,
-  prodAssetPrefix,
-  serviceWorkerFilename,
+  ...commonConfig,
+  ...addConfig,
 };

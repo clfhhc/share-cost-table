@@ -2,21 +2,24 @@ import { Reducer } from 'redux';
 import actionTypes from '../actions/actionTypes';
 
 export const initialState = {
-  count: 5,
+  gapiLoaded: false,
+  googleSignedIn: false,
 };
 
 const reducer: Reducer = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.ADD:
+    case actionTypes.UPDATE_GAPI_IS_LOADED: {
       return {
         ...state,
-        count: state.count + action.payload,
+        gapiLoaded: action.payload,
       };
-    case actionTypes.MINUS:
+    }
+    case actionTypes.UPDATE_GOOGLE_SIGNED_IN: {
       return {
         ...state,
-        count: state.count - action.payload,
+        googleSignedIn: action.payload,
       };
+    }
     default:
       return state;
   }
