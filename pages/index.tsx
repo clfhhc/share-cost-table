@@ -5,7 +5,10 @@ import getConfig from 'next/config';
 import ManifestHead from '../src/components/Head/ManifestHead';
 import GoogleSignIn from '../src/components/GoogleSignIn';
 import { defaultState } from '../src/redux/reducers/index';
-import { updateGapiIsLoaded, updateGoogleSigninStatus } from '../src/redux/actions/actions';
+import {
+  updateGapiIsLoaded as updateGapiIsLoadedAction,
+  updateGoogleSigninStatus as updateGoogleSigninStatusAction,
+} from '../src/redux/actions/actions';
 
 const { publicRuntimeConfig } = getConfig();
 const { apiKey, clientId } = publicRuntimeConfig;
@@ -16,8 +19,9 @@ const mapStateToProps = (state: typeof defaultState) => ({
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-  updateGapiIsLoaded: () => dispatch(updateGapiIsLoaded()),
-  updateGoogleSigninStatus: (isSignedIn: boolean) => dispatch(updateGoogleSigninStatus(isSignedIn)),
+  updateGapiIsLoaded: () => dispatch(updateGapiIsLoadedAction()),
+  updateGoogleSigninStatus: (isSignedIn: boolean) =>
+    dispatch(updateGoogleSigninStatusAction(isSignedIn)),
 });
 
 interface Props extends ReturnType<typeof mapStateToProps>, ReturnType<typeof mapDispatchToProps> {}

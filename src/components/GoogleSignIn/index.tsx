@@ -77,8 +77,6 @@ const GoogleSignIn: FC<Props> = ({
             Authorize
           </button>
         ))}
-      <p>{`apiLoaded: ${gapiLoaded}`}</p>
-      <p>{`signedIn: ${isSignedIn}`}</p>
     </div>
   );
 };
