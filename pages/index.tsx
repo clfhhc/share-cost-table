@@ -9,6 +9,7 @@ import {
   updateGapiIsLoaded as updateGapiIsLoadedAction,
   updateGoogleSigninStatus as updateGoogleSigninStatusAction,
 } from '../src/redux/actions/actions';
+import Db from '../src/components/Db';
 
 const { publicRuntimeConfig } = getConfig();
 const { apiKey, clientId } = publicRuntimeConfig;
@@ -46,6 +47,7 @@ export const Page: FC<Props> = ({ googleDrive, updateGapiIsLoaded, updateGoogleS
         updateGapiIsLoaded={updateGapiIsLoaded}
         updateGoogleSigninStatus={updateGoogleSigninStatus}
       />
+      <Db />
     </main>
   );
 };

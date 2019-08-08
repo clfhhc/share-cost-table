@@ -1,5 +1,5 @@
 // next.config.js
-/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-var-requires, no-param-reassign */
 const withOffline = require('next-offline');
 const withManifest = require('next-manifest');
 const publicRuntimeConfig = require('./ next.publicRuntimeConfig');
@@ -8,6 +8,16 @@ const { projectName, linkPrefix, prodAssetPrefix, serviceWorkerFilename } = publ
 
 module.exports = withManifest(
   withOffline({
+    // webpack config
+    webpack: (config, { isServer }) => {
+      if (!isServer) {
+        config.node = {
+          fs: 'empty',
+        };
+      }
+      return config;
+    },
+
     // service-worker settings
     registerSwPrefix: prodAssetPrefix,
     scope: `${prodAssetPrefix}/`,

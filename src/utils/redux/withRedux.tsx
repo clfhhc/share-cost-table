@@ -4,6 +4,7 @@ import { NextPageContext, NextComponentType } from 'next';
 import { AppContext, AppProps } from 'next/app';
 import defaultConfig, { Config } from './defaultConfig';
 import objectAssign from '../common/objectAssign';
+import checkIsServer from '../common/isServer';
 
 export interface StoreProps<S = Store> {
   store: S;
@@ -48,7 +49,7 @@ function withRedux<A extends Action = AnyAction, S extends Store<any, A> = Store
 ) {
   const config: Config = objectAssign()(
     defaultConfig,
-    { isServer: typeof window === 'undefined' },
+    { isServer: checkIsServer() },
     optionalConfig
   );
   const { storeKey, isServer, deserializeState, serializeState } = config;

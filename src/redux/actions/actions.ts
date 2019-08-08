@@ -19,3 +19,13 @@ export const updateGoogleSigninStatus = (isSignedIn: boolean) => ({
   type: actionTypes.UPDATE_GOOGLE_SIGNED_IN,
   payload: isSignedIn,
 });
+
+export const updateDBUrl = (dbUrl: string) => ({
+  type: actionTypes.UPDATE_DB_URL,
+  payload: dbUrl,
+});
+
+export const udpateDBFile = (dbFile: string) => ({
+  type: actionTypes.UPDATE_DB_FILE,
+  payload: dbFile,
+});
