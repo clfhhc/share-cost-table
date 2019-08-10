@@ -1,17 +1,5 @@
 self.__precacheManifest = [
   {
-    "url": "/share-cost-table/_next/static/8FPsvh7r8xsMjNhWj872L/pages/_app.js",
-    "revision": "dd1915c3193222d233ac"
-  },
-  {
-    "url": "/share-cost-table/_next/static/8FPsvh7r8xsMjNhWj872L/pages/_error.js",
-    "revision": "56c36b629c0996c9830b"
-  },
-  {
-    "url": "/share-cost-table/_next/static/8FPsvh7r8xsMjNhWj872L/pages/index.js",
-    "revision": "8f1a5974c0ed073202b4"
-  },
-  {
     "url": "/share-cost-table/_next/static/chunks/commons.6038c72c5d09c1ed182e.js",
     "revision": "be99b8f5cf0c31379f97"
   },
@@ -22,6 +10,18 @@ self.__precacheManifest = [
   {
     "url": "/share-cost-table/_next/static/runtime/webpack-3df6523e264ff2ac6548.js",
     "revision": "b0a559ac8f238b6fd6f7"
+  },
+  {
+    "url": "/share-cost-table/_next/static/tIYAXzd32Ex5Bgep7Ef2D/pages/_app.js",
+    "revision": "5f05c9526da51360e2d4"
+  },
+  {
+    "url": "/share-cost-table/_next/static/tIYAXzd32Ex5Bgep7Ef2D/pages/_error.js",
+    "revision": "45c01fe2a900d5f3e493"
+  },
+  {
+    "url": "/share-cost-table/_next/static/tIYAXzd32Ex5Bgep7Ef2D/pages/index.js",
+    "revision": "eb9e367ff5665d911436"
   }
 ];
 
