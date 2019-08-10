@@ -1,14 +1,17 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
+    "sourceMap": false,
+    "declaration": false,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "lib": [
       "dom",
-      "es2017"
+      "es2017",
+      "esnext.asynciterable"
     ],
     "module": "esnext",
     "moduleResolution": "node",
@@ -16,15 +19,22 @@
     "typeRoots": [
       "./node_modules/@types"
     ],
-    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "removeComments": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "target": "esnext",
+    "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "resolveJsonModule": true,
-    "removeComments": false,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "esnext",
-    "forceConsistentCasingInFileNames": true
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
   },
   "exclude": [
     "node_modules",

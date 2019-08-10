@@ -31,7 +31,7 @@ export const Page: FC<Props> = ({ googleDrive, updateGapiIsLoaded, updateGoogleS
   return (
     <main>
       <ManifestHead
-        title="Nextjs Typescript Eslint"
+        title="Share Cost Table"
         themeColor="red"
         hrefCanonical="/"
         favIconPath="/static/icons/favicon.ico"

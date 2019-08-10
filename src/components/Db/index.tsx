@@ -1,11 +1,11 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC, ChangeEvent } from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import test, { readDb } from '../../sql/test';
+import test from '../../sql/test';
 import { defaultState } from '../../redux/reducers/index';
 import {
-  updateDBUrl as updateDBUrlAction,
-  udpateDBFile as updateDBFileAction,
+  createDBUrl as createDBUrlAction,
+  loadDB as loadDbAction,
 } from '../../redux/actions/actions';
 import { ConnectedProps } from '../../utils/redux/types';
 
@@ -14,32 +14,35 @@ const mapStateToProps = (state: typeof defaultState) => ({
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-  updateDBUrl: (url: string) => dispatch(updateDBUrlAction(url)),
-  updateDBFile: (dbFile: string) => dispatch(updateDBFileAction(dbFile)),
+  createDBUrl: (name?: string) => dispatch(createDBUrlAction(name)),
+  loadDb: (file: Blob, name?: string) => dispatch(loadDbAction(file, name)),
 });
 
 type Props = ConnectedProps<typeof mapStateToProps, typeof mapDispatchToProps>;
 
-const DbComponent: FC<Props> = ({ dbUrl, updateDBUrl, updateDBFile }) => {
-  useEffect(() => {
-    test().then(updateDBUrl);
-  }, []);
+const DbComponent: FC<Props> = ({ dbUrl, createDBUrl, loadDb }) => {
+  const handleButtonClick = () => {
+    test().then(() => createDBUrl());
+  };
+
+  const handleFileClick = (e: ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length) {
+      loadDb(e.target.files[0]);
+    }
+  };
+
   return (
     <div>
+      <button type="button" onClick={handleButtonClick}>
+        Create a db
+      </button>
       {dbUrl && (
         <a href={dbUrl} download="db.sqlite">
           db_link
         </a>
       )}
-      <input
-        type="file"
-        id="input-db-file"
-        onChange={e => {
-          if (e.target.files) {
-            readDb(e.target.files[0]).then(updateDBFile);
-          }
-        }}
-      />
+      <br />
+      <input type="file" id="input-db-file" onChange={handleFileClick} />
     </div>
   );
 };

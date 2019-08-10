@@ -29,3 +29,13 @@ export const udpateDBFile = (dbFile: string) => ({
   type: actionTypes.UPDATE_DB_FILE,
   payload: dbFile,
 });
+
+export const createDBUrl = (name?: string) => ({
+  type: actionTypes.CREATE_DB_URL,
+  payload: name,
+});
+
+export const loadDB = (dbFile: Blob, name?: string) => ({
+  type: actionTypes.LOAD_DB,
+  payload: { file: dbFile, name },
+});
