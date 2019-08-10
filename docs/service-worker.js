@@ -1,31 +1,23 @@
 self.__precacheManifest = [
   {
-    "url": "/share-cost-table/_next/static/24Lbri4KBx8PhXC6tOMwW/pages/_app.js",
-    "revision": "c8f0ff8aad4fdc6bac9b"
+    "url": "/share-cost-table/_next/static/OXdPSdRSDdNfG6lzCkzKu/pages/_app.js",
+    "revision": "3c72c25baae0301c1da5"
   },
   {
-    "url": "/share-cost-table/_next/static/24Lbri4KBx8PhXC6tOMwW/pages/_error.js",
-    "revision": "1781d01d4a68a833a718"
+    "url": "/share-cost-table/_next/static/OXdPSdRSDdNfG6lzCkzKu/pages/_error.js",
+    "revision": "e8ec91205fd832f97922"
   },
   {
-    "url": "/share-cost-table/_next/static/24Lbri4KBx8PhXC6tOMwW/pages/about.js",
-    "revision": "210c83d699f6d45604d0"
+    "url": "/share-cost-table/_next/static/OXdPSdRSDdNfG6lzCkzKu/pages/index.js",
+    "revision": "377706a2efa52785d7f1"
   },
   {
-    "url": "/share-cost-table/_next/static/24Lbri4KBx8PhXC6tOMwW/pages/index.js",
-    "revision": "cdf1ffd062b477b02c12"
+    "url": "/share-cost-table/_next/static/chunks/commons.6038c72c5d09c1ed182e.js",
+    "revision": "be99b8f5cf0c31379f97"
   },
   {
-    "url": "/share-cost-table/_next/static/24Lbri4KBx8PhXC6tOMwW/pages/stats.js",
-    "revision": "8a3d3e4ee5a6aa527a1b"
-  },
-  {
-    "url": "/share-cost-table/_next/static/chunks/commons.c38b8a2d0425c03fa72c.js",
-    "revision": "cae937e98804c93a6826"
-  },
-  {
-    "url": "/share-cost-table/_next/static/runtime/main-9f512e9163db88af9766.js",
-    "revision": "7008faa788fb16165f4e"
+    "url": "/share-cost-table/_next/static/runtime/main-bc7a243f3d3a2b4ec7bf.js",
+    "revision": "ee217a34fe843f7fc751"
   },
   {
     "url": "/share-cost-table/_next/static/runtime/webpack-3df6523e264ff2ac6548.js",
