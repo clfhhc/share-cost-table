@@ -21,6 +21,7 @@ export function* loadDbFile(action: ActionWithPayload) {
   try {
     const uInt8Array = new Uint8Array(yield call(readAsArrayBuffer, action.payload.file));
     const connection = (yield call(loadDbFromFile, uInt8Array, action.payload.name)) as Connection;
+    console.log(connection);
     const helloRepository = yield call([connection, 'getRepository'], 'hello');
     const allRecord = yield call([helloRepository, 'find']);
     yield put(udpateDBFile(JSON.stringify(allRecord)));
