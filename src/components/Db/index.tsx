@@ -8,7 +8,6 @@ import {
   loadDB as loadDbAction,
 } from '../../redux/actions/actions';
 import { ConnectedProps } from '../../utils/redux/types';
-import Link from '../Link';
 
 const mapStateToProps = (state: typeof defaultState) => ({
   dbUrl: state.db.dbUrl,
@@ -44,9 +43,6 @@ const DbComponent: FC<Props> = ({ dbUrl, createDBUrl, loadDb }) => {
       )}
       <br />
       <input type="file" id="input-db-file" onChange={handleFileClick} />
-      <Link href="/static/manifest/manifest.json" passHref>
-        <link rel="manifest" />
-      </Link>
     </div>
   );
 };

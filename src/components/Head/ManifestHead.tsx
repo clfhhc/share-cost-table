@@ -40,7 +40,7 @@ const Head: React.FC<Props> = ({
     {themeColor && <meta name="theme-color" key="theme-color" content={themeColor} />}
     {hrefManifest && (
       <Link href={hrefManifest} key="manifest" passHref>
-        <link key="manifest" rel="manifest" />
+        <link key="manifest" rel="preload" as="manifest" />
       </Link>
     )}
     {!isAmp && hrefCanonical && (
@@ -50,7 +50,7 @@ const Head: React.FC<Props> = ({
     )}
     {favIconPath && (
       <Link href={favIconPath} key="fav-icon" passHref>
-        <link rel="shortcut icon" key="fav-icon" type="image/x-icon" />
+        <link rel="preload" as="shortcut icon" key="fav-icon" type="image/x-icon" />
       </Link>
     )}
     <meta name="keywords" key="keywords" content={keywords} />
