@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
-// import getConfig from 'next/config';
+import getConfig from 'next/config';
 import ManifestHead from '../src/components/Head/ManifestHead';
-// import GoogleSignIn from '../src/components/GoogleSignIn';
+import GoogleSignIn from '../src/components/GoogleSignIn';
 import { defaultState } from '../src/redux/reducers/index';
 import {
   updateGapiIsLoaded as updateGapiIsLoadedAction,
@@ -11,9 +11,9 @@ import {
 } from '../src/redux/actions/actions';
 import Db from '../src/components/Db';
 
-// const { publicRuntimeConfig } = getConfig();
-// const { apiKey, clientId } = publicRuntimeConfig;
-// const scope = 'https://www.googleapis.com/auth/drive.metadata.readonly';
+const { publicRuntimeConfig } = getConfig();
+const { apiKey, clientId } = publicRuntimeConfig;
+const scope = 'https://www.googleapis.com/auth/drive.metadata.readonly';
 
 const mapStateToProps = (state: typeof defaultState) => ({
   googleDrive: state.googleDrive,
@@ -27,8 +27,7 @@ const mapDispatchToProps = (dispatch: Dispatch) => ({
 
 interface Props extends ReturnType<typeof mapStateToProps>, ReturnType<typeof mapDispatchToProps> {}
 
-// export const Page: FC<Props> = ({ googleDrive, updateGapiIsLoaded, updateGoogleSigninStatus }) => {
-export const Page: FC<Props> = () => {
+export const Page: FC<Props> = ({ googleDrive, updateGapiIsLoaded, updateGoogleSigninStatus }) => {
   return (
     <main>
       <ManifestHead
@@ -39,7 +38,7 @@ export const Page: FC<Props> = () => {
         appleIconPath="/static/icons/icon192x192.png"
         hrefManifest="/static/manifest/manifest.json"
       />
-      {/* <GoogleSignIn
+      <GoogleSignIn
         gapiLoaded={googleDrive.gapiLoaded}
         isSignedIn={googleDrive.googleSignedIn}
         apiKey={apiKey}
@@ -47,7 +46,7 @@ export const Page: FC<Props> = () => {
         scope={scope}
         updateGapiIsLoaded={updateGapiIsLoaded}
         updateGoogleSigninStatus={updateGoogleSigninStatus}
-      /> */}
+      />
       <Db />
     </main>
   );
