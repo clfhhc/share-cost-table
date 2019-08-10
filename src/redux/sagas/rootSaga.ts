@@ -6,7 +6,7 @@ import { loadDbFromFile } from '../../sql/utils/connection';
 import readAsArrayBuffer from '../../utils/common/readAsArrayBuffer';
 import { createDbUrl as creatDbUrlFunc } from '../../sql/utils/export';
 import { ActionWithPayload } from '../../utils/redux/types';
-// import { Hello } from '../../sql/entities/hello';
+import { Hello } from '../../sql/entities/Hello';
 
 export function* createDbUrl(action: ActionWithPayload) {
   try {
@@ -21,8 +21,7 @@ export function* loadDbFile(action: ActionWithPayload) {
   try {
     const uInt8Array = new Uint8Array(yield call(readAsArrayBuffer, action.payload.file));
     const connection = (yield call(loadDbFromFile, uInt8Array, action.payload.name)) as Connection;
-    console.log(connection);
-    const helloRepository = yield call([connection, 'getRepository'], 'hello');
+    const helloRepository = yield call([connection, 'getRepository'], Hello);
     const allRecord = yield call([helloRepository, 'find']);
     yield put(udpateDBFile(JSON.stringify(allRecord)));
   } catch (error) {

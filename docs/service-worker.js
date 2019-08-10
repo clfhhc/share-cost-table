@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "url": "/share-cost-table/_next/static/Ix_WpmRZfHbMFl4_l1KZR/pages/_app.js",
-    "revision": "3f514e599fa60ecb0d91"
+    "url": "/share-cost-table/_next/static/YbfX3v0UkxuplphGdzv8j/pages/_app.js",
+    "revision": "cfc5cfa6697da369cfad"
   },
   {
-    "url": "/share-cost-table/_next/static/Ix_WpmRZfHbMFl4_l1KZR/pages/_error.js",
-    "revision": "68219b9e4d9b95c5b8e0"
+    "url": "/share-cost-table/_next/static/YbfX3v0UkxuplphGdzv8j/pages/_error.js",
+    "revision": "5a99e08f1a482fc82a75"
   },
   {
-    "url": "/share-cost-table/_next/static/Ix_WpmRZfHbMFl4_l1KZR/pages/index.js",
-    "revision": "3768e38c6beb1fac94d1"
+    "url": "/share-cost-table/_next/static/YbfX3v0UkxuplphGdzv8j/pages/index.js",
+    "revision": "1bb742f45cb84aaec9a2"
   },
   {
     "url": "/share-cost-table/_next/static/chunks/commons.6038c72c5d09c1ed182e.js",
