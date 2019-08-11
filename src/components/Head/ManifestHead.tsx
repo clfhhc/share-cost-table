@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import NextHead from 'next/head';
-import Link, { customDomain, linkPrefix } from '../Link';
+import Link from '../Link';
+import prefixLink from '../../utils/common/prefixLink';
 
 interface Props {
   title?: string;
@@ -35,13 +36,13 @@ const Head: React.FC<Props> = ({
 }) => {
   const linkToAdd: Record<string, string> = {};
   if (hrefManifest) {
-    linkToAdd.manifest = `${customDomain}${linkPrefix}${hrefManifest}`;
+    linkToAdd.manifest = prefixLink(hrefManifest);
   }
   if (!isAmp && hrefCanonical) {
-    linkToAdd.canonical = `${customDomain}${linkPrefix}${hrefCanonical}`;
+    linkToAdd.canonical = prefixLink(hrefCanonical);
   }
   if (favIconPath) {
-    linkToAdd['shortcut icon'] = `${customDomain}${linkPrefix}${favIconPath}`;
+    linkToAdd['shortcut icon'] = prefixLink(favIconPath);
   }
 
   useEffect(() => {
@@ -98,7 +99,7 @@ const Head: React.FC<Props> = ({
         <meta
           name="msapplication-TitleImage"
           key="msapplication-TitleImage"
-          content={`${linkPrefix}${appleIconPath}`}
+          content={prefixLink(appleIconPath)}
         />
       )}
       {themeColor && (
