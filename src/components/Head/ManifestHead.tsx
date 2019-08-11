@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import NextHead from 'next/head';
-import Link, { linkPrefix } from '../Link';
+import Link, { customDomain, linkPrefix } from '../Link';
 
 interface Props {
   title?: string;
@@ -35,13 +35,13 @@ const Head: React.FC<Props> = ({
 }) => {
   const linkToAdd: Record<string, string> = {};
   if (hrefManifest) {
-    linkToAdd.manifest = hrefManifest;
+    linkToAdd.manifest = `${customDomain}${linkPrefix}${hrefManifest}`;
   }
   if (!isAmp && hrefCanonical) {
-    linkToAdd.canonical = hrefCanonical;
+    linkToAdd.canonical = `${customDomain}${linkPrefix}${hrefCanonical}`;
   }
   if (favIconPath) {
-    linkToAdd['shortcut icon'] = favIconPath;
+    linkToAdd['shortcut icon'] = `${customDomain}${linkPrefix}${favIconPath}`;
   }
 
   useEffect(() => {

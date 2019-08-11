@@ -1,5 +1,4 @@
 import { getConnection, Connection, getConnectionManager } from 'typeorm/browser';
-// import { RepositoryFactory } from 'typeorm/browser/repository/RepositoryFactory';
 import { SqljsDriver } from 'typeorm/browser/driver/sqljs/SqljsDriver';
 import { connectionName } from './constants';
 import { Hello } from '../entities/Hello';

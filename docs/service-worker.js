@@ -1,7 +1,19 @@
 self.__precacheManifest = [
   {
-    "url": "/share-cost-table/_next/static/chunks/commons.b9b07639776be351addd.js",
-    "revision": "4424e1d70250017bc487"
+    "url": "/share-cost-table/_next/static/CpO7xESGy-33DII_OiZE9/pages/_app.js",
+    "revision": "b7c535f0e0ddf858f7b7"
+  },
+  {
+    "url": "/share-cost-table/_next/static/CpO7xESGy-33DII_OiZE9/pages/_error.js",
+    "revision": "3de54a208ec268bf2c9c"
+  },
+  {
+    "url": "/share-cost-table/_next/static/CpO7xESGy-33DII_OiZE9/pages/index.js",
+    "revision": "10e33ed669df3761f374"
+  },
+  {
+    "url": "/share-cost-table/_next/static/chunks/commons.7fc750dae4b34d56fc07.js",
+    "revision": "9654cb64e61db5f6cb94"
   },
   {
     "url": "/share-cost-table/_next/static/runtime/main-bc7a243f3d3a2b4ec7bf.js",
@@ -10,18 +22,6 @@ self.__precacheManifest = [
   {
     "url": "/share-cost-table/_next/static/runtime/webpack-3df6523e264ff2ac6548.js",
     "revision": "b0a559ac8f238b6fd6f7"
-  },
-  {
-    "url": "/share-cost-table/_next/static/t_D4nGqRQS2qyIczm0sdw/pages/_app.js",
-    "revision": "58846183e03b8f9b05b4"
-  },
-  {
-    "url": "/share-cost-table/_next/static/t_D4nGqRQS2qyIczm0sdw/pages/_error.js",
-    "revision": "1e36af506e12ad18edcf"
-  },
-  {
-    "url": "/share-cost-table/_next/static/t_D4nGqRQS2qyIczm0sdw/pages/index.js",
-    "revision": "ef23ab1f981015e8f6c4"
   }
 ];
 
