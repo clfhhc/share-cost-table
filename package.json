@@ -50,7 +50,7 @@
     "redux-saga": "^1.0.5",
     "reflect-metadata": "^0.1.13",
     "sql.js": "^1.0.0",
-    "typeorm": "^0.2.18"
+    "typeorm": "^0.2.25"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.5.5",
